@@ -14,10 +14,8 @@ function ControlledInputs() {
                 return [...people, person];
                 
             });
-
             setFirstName('');
             setEmail('');
-           
         } else{
             console.log('Empty values')
             alert('Fill in all fields')
