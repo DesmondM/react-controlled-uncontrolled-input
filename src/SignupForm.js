@@ -1,13 +1,14 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Validation from './Validation';
 
-function SignupForm() {
+function SignupForm({submitForm}) {
     const [values, setValues] = useState({
         fullName: "",
         email: "",
         password: "",
     });
     const [errors, setErrors] = useState({});
+    const [dataIsCorrect, setDataIsCorrect] = useState(false)
 
     const handleChange = (e) =>{
         setValues({
@@ -21,7 +22,13 @@ function SignupForm() {
         e.preventDefault();
         console.log(values);
         setErrors(Validation(values));
+        setDataIsCorrect(true);
     }
+        useEffect(()=>{
+            if(Object.keys(errors).length===0 && dataIsCorrect){
+                submitForm(true);
+            }
+        }, [errors])
     return (
         <>
         

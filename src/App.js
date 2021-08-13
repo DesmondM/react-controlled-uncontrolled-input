@@ -1,7 +1,9 @@
 
 import './App.css';
 import ControlledInputs from './ControlledInputs';
+import Form from './Form';
 import SignupForm from './SignupForm';
+import SignupFormSuccess from './SignupFormSuccess';
 import UncontrolledInputs from './UncontrolledInputs';
 
 function App() {
@@ -9,7 +11,9 @@ function App() {
     <>
       {/* <UncontrolledInputs/> */}
       {/* <ControlledInputs/> */}
-      <SignupForm/>
+      {/* <SignupFormSuccess/>
+      <SignupForm/> */}
+      <Form></Form>
     </>
   );
 }
