@@ -5,7 +5,7 @@ export const ToggleBtn = () => {
     
     return (
         <div>
-            <button onClick ={()=>setShow(!show)}>Show /Hide</button>
+            <button onClick ={()=>setShow(!show)}>{show?<p>HIDE</p>: <p>SHOW</p>}</button>
          {
          show ?
          <Item/> 
