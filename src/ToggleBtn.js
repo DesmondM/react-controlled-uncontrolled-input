@@ -6,7 +6,11 @@ export const ToggleBtn = () => {
     return (
         <div>
             <button onClick ={()=>setShow(!show)}>Show /Hide</button>
-         {show && <Item/>}
+         {
+         show ?
+         <Item/> 
+         :<Item2/>
+         }
         
         </div>
        
@@ -18,6 +22,14 @@ const Item = () => {
     return (
         <div>
             <h1>This is showing</h1>
+        </div>
+    )
+};
+
+const Item2 = () => {
+    return (
+        <div>
+            <h1>This is NOT showing</h1>
         </div>
     )
 };

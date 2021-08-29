@@ -11,10 +11,10 @@ import UncontrolledInputs from './UncontrolledInputs';
 function App() {
   return (
     <>
-      {/* <UncontrolledInputs/> */}
-      {/* <ControlledInputs/> */}
-      {/* <SignupFormSuccess/>
- {//*      <SignupForm/> */}
+      <UncontrolledInputs/> 
+       <ControlledInputs/> 
+      <SignupFormSuccess/>
+       <SignupForm/> 
   {/*     <Form></Form> */ }
 <SimpleBtn/>
 <ToggleBtn/>
