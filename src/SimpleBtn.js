@@ -4,7 +4,7 @@ import React, {useState}  from 'react'
 const SimpleBtn = () => {
     const [counter, setCounter] = useState(0)
     const [fib, setFib] = useState(0)
-    const [complexCount, setComplexCount] = useState(5)
+    const [complexCount, setComplexCount] = useState(10)
 
     const increaseVal =()=>{
     setCounter(counter+1)
@@ -15,7 +15,11 @@ const SimpleBtn = () => {
     }
 
     const complexCounter = () =>{
-        setTimeout(()=>{setComplexCount(complexCount+1)},2000)
+    //    setTimeout(()=>{setComplexCount(complexCount+2)},2000)
+        setComplexCount((prevState)=>{
+            return prevState +1
+        })
+
     }
     return (
         <div>
